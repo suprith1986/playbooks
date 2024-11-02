@@ -1,0 +1,13 @@
+---
+- name: user creation
+  hosts: all
+  become: true
+  tasks: 
+    - name: user creation
+      user:
+        name: suprith
+        comment: new user for test
+        home: /home/suprith
+        shell: /bin/bash
+
+...

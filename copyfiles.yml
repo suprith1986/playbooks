@@ -1,0 +1,14 @@
+---
+- name: copy files to nodes
+  hosts: all
+  become: true
+  tasks:
+    - name: copy files
+      copy:
+        src: /home/ubuntu/playbooks/test
+        dest: /tmp/
+        mode: ugo=rw
+        backup: true
+
+
+...

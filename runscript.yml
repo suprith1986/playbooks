@@ -1,0 +1,16 @@
+---
+- name: run a script
+  hosts: all
+  become: true
+  tasks:
+    - name: copying the file
+      copy:
+        src: /home/ubuntu/playbooks/sample.sh
+        dest: /tmp/
+        mode: u=rwx
+
+    - name: run script
+      shell: /tmp/sample.sh
+
+
+...
